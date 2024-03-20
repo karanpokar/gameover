@@ -12,5 +12,5 @@ export const PIPE_GAP = 150
 
 export const GROUND_HEIGHT = 50
 
-export const PARTNER_ID=1;
-export const PARTNER_KEY='Am8nITo3jVVMA8OpuVYV1Cfa5DWvSo3b';
+export const PARTNER_ID=0;
+export const PARTNER_KEY='';
