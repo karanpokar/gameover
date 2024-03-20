@@ -2,6 +2,7 @@ import Game from "./components/Game"
 import Logo from '../src/images/gameover.gif'
 
 import React from "react";
+import { SignTransaction } from "./components/transfer";
 
 const App = () => {
 
@@ -18,9 +19,11 @@ const App = () => {
       alignItems: "center",
       flex:1
     }}>
-            
-      <Game />
-    </div>
+      <Game/>
+     
+          </div>   
+     
+
   )
 }
 

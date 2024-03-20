@@ -7,7 +7,7 @@ import { getBalance } from './cryptoFunctions';
 import { eventTrack } from './eventTrack';
 import Loader from './Loader';
 import { getProvider } from './provider';
-import { TransferAmount } from './transfer';
+import { SignTransaction, TransferAmount } from './transfer';
 import Lottie from "lottie-react";
 import json from '../images/success.json'
 import Gif from '../images/Flappy.gif';
@@ -246,8 +246,22 @@ const fetchLeaderBoard=async()=>{
      */}
     {/* <div style={{height:20}}/> */}
     <p style={{color:'rgba(255,255,255,0.6)'}} className='modalSubHeader'>Score and collect +5000 Komets to be eligible for Exclusive Merch - Stickers and Hoodies!</p>
+
     {/* <div style={{height:20}}/> */}
     <Leaderboard />
+    <div onClick={()=>{
+    SignTransaction('Hello World')
+    //localStorage.clear();
+    //
+    //navigate('/');
+    //window.location.reload(false)
+  }
+    }  style={{width:'100%',height:44,backgroundColor:'#242C3B',borderRadius:8,alignItems:'center',justifyContent:'flex-start',display:'flex',marginTop:5,marginBottom:20,paddingLeft:20,paddingRight:20}}>
+    {/* <img src={close} style={{width:20,height:20,marginRight:10}}/> */}
+    
+    <p className='modalHeader'> Sign Message</p>
+    
+    </div>
     <div onClick={()=>{
     window.location.replace(`https://polygonscan.com/address/${localStorage.getItem('address')}`)
   }
@@ -257,6 +271,7 @@ const fetchLeaderBoard=async()=>{
     <p className='modalHeader'> Track Wallet Transaction</p>
     
     </div>
+   
     <div onClick={()=>{
     
     localStorage.clear();
